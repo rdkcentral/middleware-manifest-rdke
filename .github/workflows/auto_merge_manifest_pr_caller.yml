@@ -4,7 +4,6 @@ on:
   pull_request:
     types: [labeled]
     branches:
-      - feature/CMFSUPPORT-2426
       - develop
       - 'support/*.*.*'
 
