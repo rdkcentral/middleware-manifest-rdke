@@ -5,11 +5,11 @@
     <include name="rdke-middleware.xml"/>
 
     <!-- Vendor release layers -->
-    <project groups="products" name="meta-product-raspberrypi" path="rdke/product/meta-product-raspberrypi" remote="rdkcentral" revision="45ebeb78763fd461985ae86fe5aea6f8b1ef05ec">
+    <project groups="products" name="meta-product-raspberrypi" path="rdke/product/meta-product-raspberrypi" remote="rdkcentral" revision="release/4.1.4">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_PRODUCT_LAYER"/>
         <annotation name="MANIFEST_EXPORT_PATH1" value="MANIFEST_IS_OPEN_SOURCE"/>
     </project>
-    <project groups="release" name="meta-vendor-raspberrypi-release" path="rdke/vendor/meta-vendor-release" remote="rdkcentral" revision="3496bbe2cf04c32908cae739d71d64d26b43debc">
+    <project groups="release" name="meta-vendor-raspberrypi-release" path="rdke/vendor/meta-vendor-release" remote="rdkcentral" revision="release/4.11.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_VENDOR_RELEASE" />
     </project>
 </manifest>
