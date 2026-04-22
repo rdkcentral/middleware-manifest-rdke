@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest>
-    <remote fetch="https://github.com/rdkcentral" name="rdkcentral" review="https://github.com/rdkcentral" />
-    
-    <include name="rdke-middleware.xml" />
+    <remote fetch="https://github.com/rdkcentral" name="rdkcentral" review="https://github.com/rdkcentral"/>
+    <!-- Include the middleware xml submanifest -->
+    <include name="rdke-middleware.xml"/>
 
-    
-    <project groups="products" name="meta-product-raspberrypi" path="rdke/product/meta-product-raspberrypi" remote="rdkcentral" revision="8e94ca43a6f5f848fa865f3eb5fbd88241304a4c">
-        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_PRODUCT_LAYER" />
-        <annotation name="MANIFEST_EXPORT_PATH1" value="MANIFEST_IS_OPEN_SOURCE" />
+    <!-- Vendor release layers -->
+    <project groups="products" name="meta-product-raspberrypi" path="rdke/product/meta-product-raspberrypi" remote="rdkcentral" revision="refs/tags/4.1.4">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_PRODUCT_LAYER"/>
+        <annotation name="MANIFEST_EXPORT_PATH1" value="MANIFEST_IS_OPEN_SOURCE"/>
     </project>
     <project groups="release" name="meta-vendor-raspberrypi-release" path="rdke/vendor/meta-vendor-release" remote="rdkcentral" revision="refs/tags/4.11.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_VENDOR_RELEASE" />
