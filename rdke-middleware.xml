@@ -5,7 +5,7 @@
     <project groups="buildscripts" name="build-scripts" path="scripts" remote="rdkcentral" revision="refs/tags/1.0.3">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_SCRIPTS" />
     </project>
-    <project groups="stacklayering" name="meta-stack-layering-support" path="rdke/common/meta-stack-layering-support" remote="rdkcentral" revision="refs/tags/3.3.4">
+    <project groups="stacklayering" name="meta-stack-layering-support" path="rdke/common/meta-stack-layering-support" remote="rdkcentral" revision="refs/tags/4.0.2">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_STACK_LAYERING_SUPPORT" />
     </project>
     <project groups="buildsupport" name="meta-rdk-auxiliary" path="rdke/common/meta-rdk-auxiliary" remote="rdkcentral" revision="refs/tags/1.9.0">
@@ -32,7 +32,7 @@
     <project groups="oe" name="meta-python2" path="rdke/middleware/meta-python2" remote="rdkcentral" revision="refs/tags/rdk-4.0.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_META_PYTHON2" />
     </project>
-    <submanifest name="middleware-generic" project="rdke-middleware-generic-manifest" manifest-name="middleware-generic.xml" path="rdke/middleware/generic" remote="rdkcentral" revision="refs/tags/1.20.0">
+    <submanifest name="middleware-generic" project="rdke-middleware-generic-manifest" manifest-name="middleware-generic.xml" path="rdke/middleware/generic" remote="rdkcentral" revision="14be23fc529b9c103977465f7715fc3d4835b129">
     </submanifest>
     <project groups="rdk" name="meta-rdk-halif-headers" path="rdke/common/meta-rdk-halif-headers" remote="rdkcentral" revision="refs/tags/4.1.4">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_RDK_HALIF_HEADERS" />
