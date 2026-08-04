@@ -9,7 +9,7 @@
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_PRODUCT_LAYER" />
         <annotation name="MANIFEST_EXPORT_PATH1" value="MANIFEST_IS_OPEN_SOURCE" />
     </project>
-    <project groups="release" name="meta-vendor-raspberrypi-release" path="rdke/vendor/meta-vendor-release" remote="rdkcentral" revision="release/4.12.0">
+    <project groups="release" name="meta-vendor-raspberrypi-release" path="rdke/vendor/meta-vendor-release" remote="rdkcentral" revision="refs/tags/4.12.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_VENDOR_RELEASE" />
     </project>
 </manifest>
