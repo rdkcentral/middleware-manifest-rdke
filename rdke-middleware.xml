@@ -23,6 +23,9 @@
     <project groups="extention" name="meta-oss-common-config" path="rdke/configs/ext" remote="rdkcentral" revision="refs/tags/1.4.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_OSS_EXT" />
     </project>
+    <project groups="rdk" name="meta-rdk-bluetooth" path="rdke/vendor/meta-rdk-bluetooth" remote="rdk" revision="refs/tags/1.1.0">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_RDK_BLUETOOTH"/>
+    </project>
     <project groups="oe" name="meta-openembedded" path="rdke/common/meta-openembedded" remote="rdkcentral" revision="refs/tags/rdk-4.0.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_OPENEMBEDDED" />
     </project>
