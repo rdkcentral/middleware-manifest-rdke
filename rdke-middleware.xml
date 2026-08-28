@@ -8,7 +8,7 @@
     <project groups="stacklayering" name="meta-stack-layering-support" path="rdke/common/meta-stack-layering-support" remote="rdkcentral" revision="refs/tags/5.0.1">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_STACK_LAYERING_SUPPORT" />
     </project>
-    <project groups="buildsupport" name="meta-rdk-auxiliary" path="rdke/common/meta-rdk-auxiliary" remote="rdkcentral" revision="refs/tags/1.9.0.1">
+    <project groups="buildsupport" name="meta-rdk-auxiliary" path="rdke/common/meta-rdk-auxiliary" remote="rdkcentral" revision="refs/tags/1.10.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_RDK_AUXILIARY" />
     </project>
     <project groups="configs" name="rdke-common-config" path="rdke/configs/common" remote="rdkcentral" revision="refs/tags/1.0.24">
@@ -35,7 +35,7 @@
     <project groups="rdk" name="meta-rdk-bluetooth" path="rdke/vendor/meta-rdk-bluetooth" remote="rdkcentral" revision="refs/tags/1.1.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_RDK_BLUETOOTH"/>
     </project>
-    <submanifest name="middleware-generic" project="rdke-middleware-generic-manifest" manifest-name="middleware-generic.xml" path="rdke/middleware/generic" remote="rdkcentral" revision="release/8.7.2.0">
+    <submanifest name="middleware-generic" project="rdke-middleware-generic-manifest" manifest-name="middleware-generic.xml" path="rdke/middleware/generic" remote="rdkcentral" revision="refs/tags/1.22.0">
     </submanifest>
     <project groups="rdk" name="meta-rdk-halif-headers" path="rdke/common/meta-rdk-halif-headers" remote="rdkcentral" revision="refs/tags/5.0.0_hotfix">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_RDK_HALIF_HEADERS" />
