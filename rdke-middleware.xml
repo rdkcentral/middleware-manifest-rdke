@@ -35,7 +35,7 @@
     <project groups="oe" name="meta-python2" path="rdke/middleware/meta-python2" remote="rdkcentral" revision="refs/tags/rdk-4.0.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_META_PYTHON2" />
     </project>
-    <submanifest name="middleware-generic" project="rdke-middleware-generic-manifest" manifest-name="middleware-generic.xml" path="rdke/middleware/generic" remote="rdkcentral" revision="cf65e6f60bf2063015ab43a6edbfd4fcfe30789f">
+    <submanifest name="middleware-generic" project="rdke-middleware-generic-manifest" manifest-name="middleware-generic.xml" path="rdke/middleware/generic" remote="rdkcentral" revision="6e779e16c6c2f4f524734062cd2d2262a0588e58">
     </submanifest>
     <project groups="rdk" name="meta-rdk-halif-headers" path="rdke/common/meta-rdk-halif-headers" remote="rdkcentral" revision="refs/tags/5.0.0_hotfix">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_RDK_HALIF_HEADERS" />
