@@ -7,6 +7,7 @@
 
 Middleware layer manifest for Raspberry Pi — this repo provides the manifest and instructions to build and produce IPK feeds and middleware test images for RDK-based stacks.
 
+
 ---
 
 ## Table of Contents
