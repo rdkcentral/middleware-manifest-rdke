@@ -1,0 +1,37 @@
+
+# RDKE <RDKE_LAYER> Layer <RELEASE_VERSION> Release Note
+
+| Summary       | Content |
+|---------------|---------|
+| Manifest Repo URL | <BASE_URL> |
+| Release Tag   | [<RELEASE_VERSION>](<BASE_URL>/releases/tag/<RELEASE_VERSION>) |
+| Yocto Version | <YOCTO_VERSION> |
+| Date          | <GEN_DATE> |
+| Author        | <AUTHOR> |
+
+
+### <RDKE_LAYER> Release Details
+[<RDKE_LAYER> Release <RELEASE_VERSION>](<BASE_URL>/releases/tag/<RELEASE_VERSION>) has the layer combination listed below.
+
+| Layer Name | Current Revision/Tag |
+|------------|-------------------|
+<LAYER_TABLE>
+
+For a comprehensive list of changes, updates, and release history, refer to the [Changelog](CHANGELOG.md).
+
+<PACKAGE_LIST_LINE>
+
+<FEATURE_LIST_LINE>
+
+<RELEASE_REPORT_LINK>
+
+For RDKE <RDKE_LAYER> layer-specific build instructions, refer to [this](<BASE_URL>/blob/<RELEASE_VERSION>/README.md)
+
+## License Details
+This project is distributed under the terms outlined in the associated [License](LICENSE) and [Notice](NOTICE) files. Please review these files for detailed information.
+
+---
+
+For more instructions to refresh the contents referenced in this README see [UPDATE_GUIDE](Tools/UPDATE_GUIDE.md).
+
+---
