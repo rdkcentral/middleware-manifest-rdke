@@ -271,12 +271,6 @@ def fetch_manifest_xml(manifest_url):
         log.error(f"Error fetching manifest XML from {manifest_url}: {e}")
         sys.exit(1)
 
-#def normalize_tag(tag):
-#    """Strip refs/tags/ prefix from tag to get the actual tag name."""
-#    if tag and tag.startswith('refs/tags/'):
-#        return tag[len('refs/tags/'):]
-#    return tag
-
 def normalize_tag(tag):
     """Dynamically handle refs/tags/ and refs/heads/ for branch or tag support."""
     if not tag:
