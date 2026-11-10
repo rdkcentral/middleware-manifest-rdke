@@ -6,7 +6,7 @@
 | Manifest Repo URL | https://github.com/rdkcentral/middleware-manifest-rdke |
 | Release Tag   | [release/9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/release/9.0.1.0_community) |
 | Yocto Version | Kirkstone |
-| Date          | 2026-11-10 08:12:55 UTC |
+| Date          | 2026-11-10 11:15:31 UTC |
 | Author        | support@rdkcentral.com |
 
 
