@@ -1,161 +1,54 @@
-# Middleware Manifest for Raspberry Pi
 
-[![Release](https://img.shields.io/github/v/tag/rdkcentral/middleware-manifest-rdke?label=latest%20tag)](https://github.com/rdkcentral/middleware-manifest-rdke/tags)
-[![License](https://img.shields.io/github/license/rdkcentral/middleware-manifest-rdke)](LICENSE)
-[![Yocto](https://img.shields.io/badge/Yocto-kirkstone-blue?logo=yoctoproject)](https://docs.yoctoproject.org/)
-[![Platform](https://img.shields.io/badge/Platform-RaspberryPi4--64-green?logo=raspberrypi)](https://www.raspberrypi.com/)
+# RDKE Middleware Layer release/9.0.1.0_community Release Note
 
-Middleware layer manifest for Raspberry Pi — this repo provides the manifest and instructions to build and produce IPK feeds and middleware test images for RDK-based stacks.
+| Summary       | Content |
+|---------------|---------|
+| Manifest Repo URL | https://github.com/rdkcentral/middleware-manifest-rdke |
+| Release Tag   | [release/9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/release/9.0.1.0_community) |
+| Yocto Version | Kirkstone |
+| Date          | 2026-11-11 14:41:24 UTC |
+| Author        | support@rdkcentral.com |
 
----
 
-## Table of Contents
+### Middleware Release Details
+[Middleware Release release/9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/release/9.0.1.0_community) has the layer combination listed below.
 
-- [Middleware Manifest for Raspberry Pi](#middleware-manifest-for-raspberry-pi)
-  - [Table of Contents](#table-of-contents)
-  - [Quick Start](#quick-start)
-  - [Setup IPK Feeds](#setup-ipk-feeds)
-    - [Configure Vendor and Vendor-OSS IPK Feed](#configure-vendor-and-vendor-oss-ipk-feed)
-  - [Build Environment](#build-environment)
-  - [Building Targets](#building-targets)
-  - [Deploying IPK Feed](#deploying-ipk-feed)
-    - [Notes](#notes)
-  - [Example: Building from `develop` Branch or Release tags](#example-building-from-develop-branch-or-release-tags)
-  - [License Details](#license-details)
-  - [Release and change Details](#release-and-change-details)
-
----
-
-## Quick Start
-
-> Use a release tags for stable builds or `develop` for the latest development branch.
-
-```bash
-repo init -u https://github.com/rdkcentral/middleware-manifest-rdke.git -m raspberrypi4-64.xml -b <tag-or-branch>
-repo sync
-```
-
----
-
-## Setup IPK Feeds
-
-IPK feeds are required for package installation and dependency resolution in downstream layers. You can configure local (file-based) feeds or remote feeds.
-
-> ⚠️ **Important:** When using a local file feed, include the `file:/` prefix and make sure the path ends with a trailing `/`.
-
-### Configure Vendor and Vendor-OSS IPK Feed
-
-Edit the file:
-```
-rdke/vendor/meta-vendor-release/conf/machine/include/vendor.inc
-```
-
-Set the feed path (example):
-```
-# Configure Vendor OSS IPK's path
-VENDOR_OSS_IPK_SERVER_PATH = "file:/${HOME}/community_shared/rdk-arm64-oss-vendor/<Vendor-Oss-IPK-Version>/ipk/"
-
-# Configure Vendor IPK's path
-VENDOR_IPK_SERVER_PATH = "file:/${HOME}/community_shared/raspberrypi4-64-rdke-vendor/<Vendor-IPK-Version>/ipk/"
-```
-
----
-
-## Build Environment
-
-Initialize your build environment for the Raspberry Pi 4 (64-bit) server:
-
-```bash
-MACHINE=raspberrypi4-64-rdke source ./scripts/setup-environment
-```
-
-Enable generation of a deployable IPK feed during the build:
-
-```bash
-echo 'DEPLOY_IPK_FEED = "1"' >> conf/local.conf
-```
-
-When enabled, the build will produce `Packages.gz` for each architecture in:
-```
-./build-raspberrypi4-64-rdke/tmp/deploy/ipk/
-```
-
----
-
-## Building Targets
-
-Choose one (or both) of the following targets depending on your goal:
-
-- **Middleware layer and Middleware layer OSS IPK feed** (produces IPKs consumed by upper layers):
-```bash
-bitbake lib32-packagegroup-middleware-layer
-```
-
-- **Bootable middleware test image** (wrapper that builds a bootable image including middleware packages):
-```bash
-bitbake lib32-middleware-test-image
-```
-
-✅ At least one of the above must succeed to produce a usable IPK feed. Ideally both should succeed.
-
-The generated IPKs are located at:
-```
-./build-raspberrypi4-64-rdke/tmp/deploy/ipk/rdk-arm64-oss-middleware/
-./build-raspberrypi4-64-rdke/tmp/deploy/ipk/raspberrypi4-64-rdke-middleware/
-```
-
----
-
-## Deploying IPK Feed
-
-Copy or sync the generated IPK feed to your shared/local repository path:
-
-```bash
-rsync -av ./build-raspberrypi4-64-rdke/tmp/deploy/ipk/rdk-arm64-oss-middleware/*  ~/community_shared/rdk-arm64-oss-middleware/<Middleware-Oss-IPK-Version>/ipk/
-
-rsync -av ./build-raspberrypi4-64-rdke/tmp/deploy/ipk/raspberrypi4-64-rdke-middleware/*  ~/community_shared/raspberrypi4-64-rdke-middleware/<Middleware-IPK-Version>/ipk/
-```
-
-After syncing, confirm the `Packages.gz` files and directory layout are correct for the consumers of the feed.
-
-### Notes
-
-- **IPK feed not found by consumers**  
-  Verify `VENDOR_OSS_IPK_SERVER_PATH` and `VENDOR_IPK_SERVER_PATH` has `file:/` prefix and a trailing `/`. Confirm `Packages.gz` exists for each arch.
-
-- **Paths with spaces**  
-  Avoid spaces in file-system paths for feeds. Use underscores `_` instead.
-  
----
-
-## Example: Building from `develop` Branch or Release tags
-
-A fully copy-paste example to build from `develop` or Release tags:
-
-```bash
-# Option A: Building from release tags
-repo init -u https://github.com/rdkcentral/middleware-manifest-rdke.git -m raspberrypi4-64.xml -b refs/tags/<tag version>
-
-# Option B: Building from develop Branch
-repo init -u https://github.com/rdkcentral/middleware-manifest-rdke.git -m raspberrypi4-64.xml -b develop
-
-repo sync
-MACHINE=raspberrypi4-64-rdke source ./scripts/setup-environment
-echo 'DEPLOY_IPK_FEED = "1"' >> conf/local.conf
-
-# Option A: Build middleware IPK feed
-bitbake lib32-packagegroup-middleware-layer
-
-# Option B: Build bootable middleware test image
-bitbake lib32-middleware-test-image
-```
-
----
-
-## License Details
-
-This project is distributed under the terms outlined in the associated [License](LICENSE) and [Notice](NOTICE) files. Please review these files for detailed information.
-
-## Release and change Details
+| Layer Name | Current Revision/Tag |
+|------------|-------------------|
+| meta-product-raspberrypi | [4.1.7](https://github.com/rdkcentral/meta-product-raspberrypi/tree/4.1.7) |
+| meta-vendor-raspberrypi-release | [4.15.0](https://github.com/rdkcentral/meta-vendor-raspberrypi-release/tree/4.15.0) |
+| build-scripts | [1.0.5](https://github.com/rdkcentral/build-scripts/tree/1.0.5) |
+| meta-stack-layering-support | [5.0.4](https://github.com/rdkcentral/meta-stack-layering-support/tree/5.0.4) |
+| meta-rdk-auxiliary | [1.10.1](https://github.com/rdkcentral/meta-rdk-auxiliary/tree/1.10.1) |
+| rdke-common-config | [1.0.26](https://github.com/rdkcentral/rdke-common-config/tree/1.0.26) |
+| rdke-stb-config | [1.0.0](https://github.com/rdkcentral/rdke-stb-config/tree/1.0.0) |
+| meta-rdk-oss-reference | [4.14.1](https://github.com/rdkcentral/meta-rdk-oss-reference/tree/4.14.1) |
+| meta-oss-common-config | [1.4.0](https://github.com/rdkcentral/meta-oss-common-config/tree/1.4.0) |
+| meta-rdk-bluetooth | [1.1.0](https://github.com/rdkcentral/meta-rdk-bluetooth/tree/1.1.0) |
+| meta-openembedded | [rdk-4.0.0](https://github.com/rdkcentral/meta-openembedded/tree/rdk-4.0.0) |
+| poky | [rdk-4.7.0](https://github.com/rdkcentral/poky/tree/rdk-4.7.0) |
+| meta-python2 | [rdk-4.0.0](https://github.com/rdkcentral/meta-python2/tree/rdk-4.0.0) |
+| meta-rdk-halif-headers | [5.0.0_hotfix](https://github.com/rdkcentral/meta-rdk-halif-headers/tree/5.0.0_hotfix) |
+| meta-middleware-generic-support | [release/9.0.1.0_community](https://github.com/rdkcentral/meta-middleware-generic-support/tree/release/9.0.1.0_community) |
+| meta-rdk | [release/9.0.1.0_community](https://github.com/rdkcentral/meta-rdk/tree/release/9.0.1.0_community) |
+| meta-rdk-video | [release/9.0.1.0_community](https://github.com/rdkcentral/meta-rdk-video/tree/release/9.0.1.0_community) |
+| meta-rdk-oss-ext-middleware | [6ec673ccfd21bb80547cbeef19cba96d23b8a906](https://github.com/rdkcentral/meta-rdk-oss-ext-middleware/commit/6ec673ccfd21bb80547cbeef19cba96d23b8a906) |
 
 For a comprehensive list of changes, updates, and release history, refer to the [Changelog](CHANGELOG.md).
+
+The [packages and versions](MiddlewarePackagesAndVersions.md) file provides the list of packages in this Middleware release.
+
+
+
+Release Details: [https://wiki.rdkcentral.com/spaces/CMF/pages/529531165/9.0.1.0_community+-+RPI4-+Release+Notes](https://wiki.rdkcentral.com/spaces/CMF/pages/529531165/9.0.1.0_community+-+RPI4-+Release+Notes)
+
+For RDKE Middleware layer-specific build instructions, refer to [Build Steps](build_steps.md).
+
+## License Details
+This project is distributed under the terms outlined in the associated [License](LICENSE) and [Notice](NOTICE) files. Please review these files for detailed information.
+
+---
+
+For more instructions to refresh the contents referenced in this README see [UPDATE_GUIDE](Tools/UPDATE_GUIDE.md).
+
+---
