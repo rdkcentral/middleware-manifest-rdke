@@ -6,7 +6,7 @@
 | Manifest Repo URL | https://github.com/rdkcentral/middleware-manifest-rdke |
 | Release Tag   | [release/9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/release/9.0.1.0_community) |
 | Yocto Version | Kirkstone |
-| Date          | 2026-11-10 11:15:31 UTC |
+| Date          | 2026-11-11 10:42:01 UTC |
 | Author        | support@rdkcentral.com |
 
 
@@ -42,7 +42,7 @@ The [packages and versions](MiddlewarePackagesAndVersions.md) file provides the 
 
 Release Details: [https://wiki.rdkcentral.com/spaces/CMF/pages/529531165/9.0.1.0_community+-+RPI4-+Release+Notes](https://wiki.rdkcentral.com/spaces/CMF/pages/529531165/9.0.1.0_community+-+RPI4-+Release+Notes)
 
-For RDKE Middleware layer-specific build instructions, refer to [this](https://github.com/rdkcentral/middleware-manifest-rdke/blob/release/9.0.1.0_community/README.md)
+For RDKE Middleware layer-specific build instructions, refer to [this](https://github.com/rdkcentral/middleware-manifest-rdke/blob/release/9.0.1.0_community/README.md) or follow the detailed [Build Steps](build_steps.md).
 
 ## License Details
 This project is distributed under the terms outlined in the associated [License](LICENSE) and [Notice](NOTICE) files. Please review these files for detailed information.
