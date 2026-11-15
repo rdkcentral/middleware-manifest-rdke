@@ -6,7 +6,7 @@
 | Manifest Repo URL | https://github.com/rdkcentral/middleware-manifest-rdke |
 | Release Tag   | [release/9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/release/9.0.1.0_community) |
 | Yocto Version | Kirkstone |
-| Date          | 2026-11-11 14:41:24 UTC |
+| Date          | 2026-11-15 10:08:47 UTC |
 | Author        | support@rdkcentral.com |
 
 
@@ -29,9 +29,9 @@
 | poky | [rdk-4.7.0](https://github.com/rdkcentral/poky/tree/rdk-4.7.0) |
 | meta-python2 | [rdk-4.0.0](https://github.com/rdkcentral/meta-python2/tree/rdk-4.0.0) |
 | meta-rdk-halif-headers | [5.0.0_hotfix](https://github.com/rdkcentral/meta-rdk-halif-headers/tree/5.0.0_hotfix) |
-| meta-middleware-generic-support | [release/9.0.1.0_community](https://github.com/rdkcentral/meta-middleware-generic-support/tree/release/9.0.1.0_community) |
-| meta-rdk | [release/9.0.1.0_community](https://github.com/rdkcentral/meta-rdk/tree/release/9.0.1.0_community) |
-| meta-rdk-video | [release/9.0.1.0_community](https://github.com/rdkcentral/meta-rdk-video/tree/release/9.0.1.0_community) |
+| meta-middleware-generic-support | [1.24.0_community](https://github.com/rdkcentral/meta-middleware-generic-support/tree/1.24.0_community) |
+| meta-rdk | [1.24.0_community](https://github.com/rdkcentral/meta-rdk/tree/1.24.0_community) |
+| meta-rdk-video | [1.24.0_community](https://github.com/rdkcentral/meta-rdk-video/tree/1.24.0_community) |
 | meta-rdk-oss-ext-middleware | [6ec673ccfd21bb80547cbeef19cba96d23b8a906](https://github.com/rdkcentral/meta-rdk-oss-ext-middleware/commit/6ec673ccfd21bb80547cbeef19cba96d23b8a906) |
 
 For a comprehensive list of changes, updates, and release history, refer to the [Changelog](CHANGELOG.md).

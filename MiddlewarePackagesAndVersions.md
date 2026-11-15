@@ -2,7 +2,7 @@
 
 | Package Name | Package Version |
 |--------------|-----------------|
-| lib32-packagegroup-middleware-layer | 8.7.3.1-r0 |
+| lib32-packagegroup-middleware-layer | 9.0.1.0_community-r0 |
 | lib32-apparmor-generic | [2.4.1](https://github.com/rdkcentral/rdk-apparmor-profiles/tree/2.4.1) |
 | lib32-audiocapturemgr | 1.0.0 |
 | lib32-bluetooth-core | [1.1.0](https://github.com/rdkcentral/bluetooth/tree/1.1.0) |
