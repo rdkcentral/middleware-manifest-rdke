@@ -1,17 +1,17 @@
 
-# RDKE Middleware Layer release/9.0.1.0_community Release Note
+# RDKE Middleware Layer 9.0.1.0_community Release Note
 
 | Summary       | Content |
 |---------------|---------|
 | Manifest Repo URL | https://github.com/rdkcentral/middleware-manifest-rdke |
-| Release Tag   | [release/9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/release/9.0.1.0_community) |
+| Release Tag   | [9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/9.0.1.0_community) |
 | Yocto Version | Kirkstone |
 | Date          | 2026-11-15 10:08:47 UTC |
 | Author        | support@rdkcentral.com |
 
 
 ### Middleware Release Details
-[Middleware Release release/9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/release/9.0.1.0_community) has the layer combination listed below.
+[Middleware Release 9.0.1.0_community](https://github.com/rdkcentral/middleware-manifest-rdke/releases/tag/9.0.1.0_community) has the layer combination listed below.
 
 | Layer Name | Current Revision/Tag |
 |------------|-------------------|
