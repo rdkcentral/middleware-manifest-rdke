@@ -37,4 +37,7 @@
     <project groups="rdk" name="meta-rdk-halif-headers" path="rdke/common/meta-rdk-halif-headers" remote="rdkcentral" revision="refs/tags/5.0.0_hotfix">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_RDK_HALIF_HEADERS" />
     </project>
+    <project groups="imagebuilder" name="meta-image-support" path="rdke/common/meta-image-support" remote="rdkcentral" revision="refs/tags/1.0.0">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_IMAGE_SUPPORT"/>
+    </project>
 </manifest>
